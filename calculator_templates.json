@@ -1,0 +1,6 @@
+{
+    "calculate_equation": [
+        "Calculate {*equation}",
+        "calc/calculate {*equation}"
+    ]
+}
