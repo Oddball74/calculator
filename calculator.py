@@ -5,7 +5,7 @@ required_plugins=["nlp_core"]
 
 def __init__(self):
    for plugin in self.loaded_plugins[:]:
-       if plugin["name"] == __name__:
+        if plugin["name"] == os.path.basename(__file__).replace('.py',''):
            path = plugin["path"]
            break
    self.load_template_file(os.path.join(path,"calculator_templates.json"))
