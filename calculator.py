@@ -4,12 +4,8 @@ import os, sys
 required_plugins=["nlp_core"]
 
 def __init__(self):
-   for plugin in self.loaded_plugins[:]:
-        if plugin["name"] == os.path.basename(__file__).replace('.py',''):
-           path = plugin["path"]
-           break
-   self.load_template_file(os.path.join(path,"calculator_templates.json"))
-   pass
+    self.load_template_file(os.path.join(os.path.dirname(__file__),"calculator_templates.json"))
+    pass
 
 def text2int(textnum, numwords={}):
     outputs = []
